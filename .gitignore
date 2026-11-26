@@ -1,0 +1,21 @@
+# 白名单模式：默认忽略父目录下所有杂项、构建产物、日志与其他独立项目
+/*
+
+# 总仓自身受控文件与目录
+!.gitignore
+!.gitmodules
+!AGENTS.md
+!CLAUDE.md
+!GEMINI.md
+!README.md
+!.github/
+!.agents/
+!docs/
+!scripts/
+
+# 子目录内通用忽略
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+*.log

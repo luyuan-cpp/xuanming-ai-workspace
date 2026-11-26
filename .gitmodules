@@ -1,0 +1,30 @@
+[submodule "mmorpg-client"]
+	path = mmorpg-client
+	url = git@github.com:luhailong-cpp/mmorpg-client.git
+	branch = main
+	ignore = all
+	update = none
+[submodule "xuanming-server-mmo-cpp"]
+	path = xuanming-server-mmo-cpp
+	url = git@github.com:luyuan-cpp/xuanming-server-mmo.git
+	branch = main
+	ignore = all
+	update = none
+[submodule "xuanming-server-mmo"]
+	path = xuanming-server-mmo
+	url = git@github.com:luyuan-java/xuanming-server-mmo.git
+	branch = main
+	ignore = all
+	update = none
+[submodule "xuanming-server-mmo-python"]
+	path = xuanming-server-mmo-python
+	url = https://github.com/luhailong-python/xuanming-server-mmo-python.git
+	branch = main
+	ignore = all
+	update = none
+[submodule "xuanming-server"]
+	path = xuanming-server
+	url = https://github.com/luyuan-go/xuanming-server.git
+	branch = main
+	ignore = all
+	update = none
