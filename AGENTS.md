@@ -6,7 +6,7 @@
 
 ## 1. 会话启动门禁（每次必做）
 
-0. **新电脑 / 新 AI Agent 环境**：先按 [docs/rules/required-skills.md](docs/rules/required-skills.md) 装齐必装 Skills（8 仓 618 项），并按 [README.md](README.md) 跑 `scripts/bootstrap.ps1` 拉齐一级子仓。
+0. **新电脑 / 新 AI Agent 环境**：先按 [docs/rules/required-skills.md](docs/rules/required-skills.md) 装齐必装 Skills（8 仓精选 80 项，防上下文截断与规则冲突），并按 [README.md](README.md) 跑 `scripts/bootstrap.ps1` 拉齐一级子仓。
 1. 阅读本文件及任务涉及的通用分章细则（见下方索引）。
 2. 确定本次任务涉及哪些子仓库，**逐一通读每个目标子仓的 `AGENTS.md` 及其专属 `docs/rules/*.md`**，严格遵守各子仓自己的构建/测试、提交格式与 `git push` 授权边界，不得把某一个子仓的习惯套用到其他子仓。
 3. 动手前在目标子仓执行 `git status -sb` 与 `git log -20 --oneline`，不覆盖或回退既有未提交改动。
@@ -39,13 +39,20 @@
 
 | 主题 | 核心内容摘要 | 完整文档 |
 |---|---|---|
-| 必装 Skills 清单 | 8 仓 618 个必装 Skills + Windows 一键安装与验收脚本 | [docs/rules/required-skills.md](docs/rules/required-skills.md) |
-| Skills 精选梯队 | 618 个必装技能按实战杠杆排序的 S+/S/A 梯队速查 | [docs/rules/ai-skills-ranking.md](docs/rules/ai-skills-ranking.md) |
+| 必装 Skills 清单 | 8 仓精选 80 个必装 Skills + Windows 一键安装、去重与验收脚本 | [docs/rules/required-skills.md](docs/rules/required-skills.md) |
+| Skills 精选梯队与冲突裁决 | 80 个精选技能 S+/S/A 梯队、同域唯一默认主选与多 Skill 冲突裁决表 | [docs/rules/ai-skills-ranking.md](docs/rules/ai-skills-ranking.md) |
 | AI 协作与模型档位 | Claude/Gemini 分工、Codex 仅作图、强制高低档模型切换、设计落盘与异机作图交接铁律 | [docs/rules/ai-workflow.md](docs/rules/ai-workflow.md) |
 | 通用工程与设计原则 | SOLID、23 种设计模式、跨模块 Actor 不可变消息隔离、高 Star 开源库三步选型、实例与布局分层 | [docs/rules/engineering-principles.md](docs/rules/engineering-principles.md) |
 | 位图存储与删表 ID | 纯布尔状态优先 bit 位图、归属业务表不绑 Reward 表、删表 ID 策划与程序红线 | [docs/rules/bit-storage-and-table-ids.md](docs/rules/bit-storage-and-table-ids.md) |
 | 命名规范与权限边界 | 见名知意带单位、关联 Git 仓库总表、跨仓硬禁令与权限边界 | [docs/rules/naming-and-boundaries.md](docs/rules/naming-and-boundaries.md) |
 | 自研通用 Skills | 团队自建跨仓通用自定义 Skill 存放目录 | [.agents/skills/README.md](.agents/skills/README.md) |
+
+### 多 Skill 冲突裁决规则（强制）
+
+- **优先级顺序**：`本轮用户显式指令 > 目标子仓 AGENTS.md > 总仓 AGENTS.md（含 docs/rules/） > ponytail 原生插件规则 > 用户显式点名 Skill > 自动触发 Skill`。
+- **禁用全局抢跑型 Skill**：`using-superpowers`、`using-agent-skills`、`brainstorming`、`orch-*` 已从活跃目录移出；明确任务按 [ai-workflow.md](docs/rules/ai-workflow.md) + `ponytail` 最小完整改动直接执行，仅需求模糊或用户明确要求拷问/规划时才触发 `grilling` / `spec-driven-development` / `writing-plans`。
+- **同域只走 1 个默认主选**：不叠加多套同功能流程（排障=`systematic-debugging`、TDD=`tdd`、日常评审=`ponytail-review`、五维深审=`code-review-and-quality`、需求拷问=`grilling`、交付验真=`verification-before-completion`、写 Skill=`skill-creator`），完整对照见 [docs/rules/ai-skills-ranking.md](docs/rules/ai-skills-ranking.md)。
+- **原生插件去重与 Codex 隔离**：Claude Code 与 Antigravity 已装原生 `ponytail` 插件，其 `skills/` 目录不保留 `ponytail*` 重复副本；`~/.codex/skills` 专用于 Codex 作图/美术技能，严禁混装编码类 Skill。
 
 ## 5. 挂载子仓库索引（按项目分组，严禁串用规则）
 

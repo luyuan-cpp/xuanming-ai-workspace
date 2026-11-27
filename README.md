@@ -24,7 +24,7 @@ cd xuanming-workspace
 # 2. 一键拉齐 5 个一级子仓到 main 分支，并自动启用 ignore=all / update=none 防误覆盖保护
 pwsh -File scripts/bootstrap.ps1
 
-# 3. 安装必装 618 个全局 AI Skills（按文档第 2 节执行）
+# 3. 安装必装 80 个精选全局 AI Skills（按文档第 2 节执行，已去重防截断）
 # 详见 docs/rules/required-skills.md
 ```
 
