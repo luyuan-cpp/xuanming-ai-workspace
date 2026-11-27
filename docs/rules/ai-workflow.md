@@ -41,3 +41,11 @@
   - 需要让 Codex 制作新 UI / 美术素材时，必须明确告知负责人；**另一台电脑上的 Codex 拿不到本机任何仓库文件或 `.md`**，因此在目标仓落盘留档之后，**必须在回复中直接输出可整段复制给 Codex 的纯功能作图清单**。
   - **输出目录固定放图仓 `D:\work\image\designs\<新专题目录>\` 且严禁出现任何 Unity / 代码词**：禁止出现 `Unity`、`uGUI`、`Prefab`、`Canvas`、`Sprite`、`spriteBorder`、`.meta`、`mmorpg-client`、`Assets/...`、C# 类名或协议/RPC 名（本机导入映射单独放在留档 `.md` 文末「本机研发导入备忘」）。
   - **只告诉 Codex 做什么 UI，不要替 GPT / Codex 定画风和色号**：禁止出现画风词、材质词或色号/配色（如「道家 Q 版」「水墨」「国风」「仙侠」「#244C3E」等）；清单只写**用途、像素尺寸（及显示尺寸）、文件名、透明底（PNG-32）、文字留空规则、是否可拉伸及图仓输出目录**。
+  - **每次做 UI 必须列出 7 张长期标准参照图（2026-11-26 更新，与图仓 `docs/UI_STANDARD_REFERENCES.json` 同步）**：每次向 Codex 交付作图清单时须列出全部 7 张长期标准参照的中文名称与图仓相对路径，并要求开工先逐张展示实图（帮会图仍是首要标准；已否决的 `designs/season-team-tournament-v2/previews/07-components.png` 永久排除且不写进作图正文）：
+    1. 邮件界面：`designs/mail-ui-v1/01-mail-event.png`
+    2. 组队界面：`designs/team-ui-v2/team-ui-v2.png`
+    3. 帮会界面（首要标准）：`designs/ranked-play-v2-ui-20261125/assets/approved-guild-reference.png`
+    4. 天墉生死擂 · 下达战书：`designs/ui-standard-references/jianghu-duel/01-challenge-approved.png`
+    5. 江湖恩怨录：`designs/ui-standard-references/jianghu-duel/02-grudges-approved.png`
+    6. 帮派恩怨墙：`designs/ui-standard-references/jianghu-duel/03-guild-wall-approved.png`
+    7. 江湖战书 · 三种弹窗：`designs/ui-standard-references/jianghu-duel/04-popups-approved.png`
